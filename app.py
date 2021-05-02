@@ -62,12 +62,12 @@ def get_company_tags():
 
       ps = data['problem-statement']
       tags = data['tags']
-      num = data['num-companies']
+      num = int(data['num-companies'])
       
       return jsonify(
           message='extracted successfully',
           success='ok',
-          company_data = company_data[:num+1]
+          company_data = company_data[:num]
       )
 
 if __name__ == '__main__':
